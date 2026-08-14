@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KAY LASHES</title>
+
+    <style>
+
+        /* =========================
+           GENERAL STYLING
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff5f8;
+            color: #5c2944;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: linear-gradient(
+                135deg,
+                #f8bbd0,
+                #f48fb1,
+                #ec407a
+            );
+
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        header h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+
+        /* =========================
+           NAVIGATION BAR
+        ========================= */
+
+        nav {
+            background-color: #ad1457;
+            padding: 18px;
+            text-align: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 18px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #ffd6e5;
+        }
+
+
+        /* =========================
+           HOME SECTION
+        ========================= */
+
+        #home {
+            background-color: #fce4ec;
+            min-height: 600px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 70px 10%;
+            gap: 50px;
+        }
+
+        .home-text {
+            width: 50%;
+        }
+
+        .home-text h2 {
+            font-size: 48px;
+            color: #c2185b;
+            margin-bottom: 20px;
+        }
+
+        .home-text p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           IMAGE PLACEHOLDER
+        ========================= */
+
+        .image-placeholder {
+            width: 450px;
+            height: 350px;
+
+            background-color: #f8bbd0;
+
+            border: 3px dashed #ec407a;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #ad1457;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .button {
+            display: inline-block;
+
+            background-color: #d81b60;
+            color: white;
+
+            padding: 14px 28px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #880e4f;
+            transform: scale(1.05);
+        }
+
+
+        /* =========================
+           ABOUT SECTION
+        ========================= */
+
+        .about {
+            text-align: center;
+            padding: 70px 15%;
+            background-color: #f8bbd0;
+        }
+
+        .about h2 {
+            color: #ad1457;
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           GENERAL SECTION TITLE
+        ========================= */
+
+        .section-title {
+            text-align: center;
+            padding: 70px 20px 40px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #ad1457;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        #products {
+            background-color: #fff0f5;
+            padding-bottom: 80px;
+        }
+
+        .products-container {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 30px;
+
+            padding: 20px 10%;
+        }
+
+        .product-card {
+            background-color: white;
+
+            padding: 20px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow:
+                0 5px 20px rgba(173, 20, 87, 0.15);
+
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .product-card h3 {
+            color: #c2185b;
+            margin: 15px 0 10px;
+            font-size: 22px;
+        }
+
+        .product-card p {
+            margin-bottom: 10px;
+        }
+
+        .product-card .price {
+            color: #ad1457;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 230px;
+
+            background-color: #f8bbd0;
+
+            border: 3px dashed #ec407a;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #ad1457;
+            font-weight: bold;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        /* =========================
+           WORKSHOP
+        ========================= */
+
+        #workshop {
+            background-color: #fce4ec;
+            padding-bottom: 80px;
+        }
+
+        .workshop-container {
+            display: flex;
+
+            align-items: center;
+
+            gap: 50px;
+
+            padding: 20px 10%;
+        }
+
+        .workshop-image {
+            width: 50%;
+            height: 350px;
+
+            background-color: #f48fb1;
+
+            border: 3px dashed #ad1457;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+            font-weight: bold;
+        }
+
+        .workshop-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .workshop-info {
+            width: 50%;
+        }
+
+        .workshop-info h3 {
+            font-size: 30px;
+            color: #c2185b;
+            margin-bottom: 15px;
+        }
+
+        .workshop-info p {
+            margin-bottom: 12px;
+        }
+
+        .workshop-details {
+            background-color: #f8bbd0;
+
+            padding: 20px;
+
+            border-radius: 15px;
+
+            margin: 20px 0;
+        }
+
+
+        /* =========================
+           BLOG
+        ========================= */
+
+        #blog {
+            background-color: #fff5f8;
+            padding-bottom: 80px;
+        }
+
+        .blog-container {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 30px;
+
+            padding: 20px 10%;
+        }
+
+        .blog-card {
+            background-color: white;
+
+            padding: 20px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 5px 20px rgba(173, 20, 87, 0.15);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 230px;
+
+            background-color: #f8bbd0;
+
+            border: 3px dashed #ec407a;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #ad1457;
+            font-weight: bold;
+
+            margin-bottom: 20px;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blog-card h3 {
+            color: #c2185b;
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .blog-date {
+            color: #ec407a;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           CONTACT SECTION
+        ========================= */
+
+        #contact {
+            background-color: #f8bbd0;
+
+            text-align: center;
+
+            padding: 70px 20px;
+        }
+
+        #contact h2 {
+            color: #ad1457;
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #880e4f;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+
+        /* =========================
+           MOBILE PHONE DESIGN
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            header h1 {
+                font-size: 35px;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            #home {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .home-text {
+                width: 100%;
+            }
+
+            .image-placeholder {
+                width: 100%;
+                height: 300px;
+            }
+
+            .products-container {
+                grid-template-columns: 1fr;
+            }
+
+            .workshop-container {
+                flex-direction: column;
+            }
+
+            .workshop-image,
+            .workshop-info {
+                width: 100%;
+            }
+
+            .blog-container {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <h1>KAY LASHES</h1>
+
+        <p>
+            Enchancing your beauty one lash at a time💗!
+        </p>
+
+    </header>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#products">Products</a>
+
+        <a href="#workshop">Workshop</a>
+
+        <a href="#blog">Blog</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <section id="home">
+
+        <div class="home-text">
+
+            <h2>WELCOME 💕</h2>
+
+            <p>
+                Welcome to our Kay Lashes! 
+                
+            <p>
+                Living your life, your way. A lash business that promotes confidence at an affordable price.Welcome to Kay Lashes ✨
+
+Welcome to Kay Lashes, where beauty meets confidence. 💜
+
+At Kay Lashes, we believe that every woman deserves to feel beautiful, confident, and effortlessly glamorous. We provide quality eyelash services designed to enhance your natural beauty and give you a look that makes you feel your absolute best.
+
+Whether you’re looking for something soft and natural, bold and dramatic, or completely customised, we’re here to create a look that’s perfect for you.
+
+✨ Beautiful lashes. Beautiful confidence. Beautiful you.
+
+Thank you for choosing Kay Lashes — we can’t wait to have you looking and feeling your best!
+            
+            </p>
+
+
+
+        
+
+         
+            
+
+       
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="about">
+
+        <h2>ABOUT US 🌸</h2>
+
+        <p>
+         About Kay Lashes ✨
+
+Where Beauty Meets Confidence
+
+Kay Lashes is a beauty brand created with one simple goal: to help every client feel confident, beautiful, and comfortable in their own skin.
+
+We specialise in creating beautiful lash looks that complement each client’s unique style and personality. From elegant and natural sets to bold and glamorous designs, we take pride in providing a personalised experience for every client.
+
+At Kay Lashes, we believe that getting your lashes done should be more than just a beauty appointment — it should be a moment to relax, feel pampered, and leave feeling like the best version of yourself.
+
+Our Mission
+
+Our mission is to provide quality, beautiful, and personalised lash services while creating a welcoming environment where every client feels valued.
+
+Why Choose Kay Lashes?
+
+* ✨ Personalised lash designs
+* 💜 A welcoming and comfortable experience
+* 👁️ Styles to suit different personalities and occasions
+* 💕 Attention to detail
+* 🌸 A focus on making every client feel confident
+
+Your beauty. Your style. Your lashes.
+
+Welcome to the Kay Lashes family. 💜   
+
+            
+            
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <section id="Services">
+
+        <div class="section-title">
+
+            <h2> OUR SERVICES 🛍️</h2>
+
+            <p>
+                Take a look at some of the services we provide.
+            </p>
+
+        </div>
+
+
+        <div class="products-container">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="https://uploads.onecompiler.io/44w2ydm3n/1786723558874/WhatsApp%2520Image%25202026-08-06%2520at%252009.58.02%20(1).jpeg" alt="" />
+                    
+
+                </div>
+
+                <h3>Voluminous Cateye lash Extensions</h3>
+
+            
+                </p>
+
+                <p class="price">
+                    R 250
+                </p>
+
+                <a href="#contact" class="button">
+                    Enquire
+                </a>
+
+            </div>
+
+            <!-- PRODUCT 4 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                      <img src="https://uploads.onecompiler.io/44w2ydm3n/1786723572865/WhatsApp%252520Image%2525202026-08-06%252520at%25252009-CaLDx.58.42%252520%2525281%252529.jpeg" alt="" />
+                    
+
+                </div>
+
+                <h3> Classic Wispy set</h3>
+
+                
+                </p>
+
+                <p class="price">
+                    R350
+                </p>
+
+                <a href="#contact" class="button">
+                    Enquire
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 5 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="https://uploads.onecompiler.io/44w2ydm3n/1786723536963/WhatsApp%2520Image%25202026-08-06%2520at%252009.57.59%2520%25281%2529.jpeg" alt="" />
+
+                </div>
+
+                <h3>Classic princess set</h3>
+
+                       
+                <p class="price">
+                    R200
+                </p>
+
+                <a href="#contact" class="button">
+                    Enquire
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 6 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                  <img src="https://uploads.onecompiler.io/44w2ydm3n/1786726121020/classic%20set.jpg" alt="" />
+                 
+
+                </div>
+
+                <h3>Small Cateye set</h3>
+
+                <p class="price">
+                    R150
+                </p>
+
+                <a href="#contact" class="button">
+                    Enquire
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WORKSHOP
+    ========================== -->
+
+    <section id="workshop">
+
+        <div class="section-title">
+
+            <h2> Kay Lashes Workshop 🎨</h2>
+
+            <p>
+                Come and learn, create and have fun with us!
+            </p>
+
+        </div>
+
+            <div class="workshop-info">
+
+                <p>
+                    Giving young ladies an opportunity to make women feel confident
+                    while making money on the side.
+                    
+                </p>
+
+                <p>
+                    Expect to learn beginner entry lash extension tips, Do's & Dont's
+                    All material will be provided to each student once 50% has been paid.
+                    
+                </p>
+
+
+                <div class="workshop-details">
+
+                    <p>
+                        <strong>Date: 14 - 18 November 2026</strong>
+                    
+                    </p>
+
+                    <p>
+                        <strong>Time: 10:00 am - 14:00 pm</strong>
+                       
+                    </p>
+
+                    <p>
+                        <strong>Location: 50 Hermanus Street, Cape Town</strong>
+                      
+                    </p>
+
+                    <p>
+                        <strong>Price:</strong>
+                        R
+                    </p>
+
+                </div>
+
+
+                <a href="#contact" class="button">
+                    Book A Workshop
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact">
+
+        <h2>GET IN TOUCH 💗</h2>
+
+        <div class="contact-info">
+
+            <p>
+                We'd love to hear from you!
+            </p>
+
+            <br>
+
+            <p>
+                📧 Email:
+                nelo.mokoena@icloud.com
+            </p>
+
+            <p>
+                📱 Phone:
+                068 806 3178
+            </p>
+
+            <p>
+                📍 Location:
+                50 Hermanus street, Cape Town
+            </p>
+
+            <br>
+
+            <a href="#" class="button">
+                Contact Us
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © Kay Lashes
+        </p>
+
+        <p>
+            Made with 💗
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
